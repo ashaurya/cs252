@@ -8,25 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script>
-   /* function myFun() {
-      //document.write('asdsa');
-	//alert(document.getElementById('optionA').value);
-      //e.preventDefault();
-      var option = document.getElementById('optionA').value; 
-      var last_name = $("#last_name").val();
-      $.ajax({
-        type:'POST',
-	url: 'index.php',
-        data: option,
-	cache: false,
-	contentType: false,
-	processData: false,
-        success:function(data) {
-          alert('success!!');
-        }
-      });
-    };*/
-  function myFun() {
+ function myFun() {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -37,12 +19,7 @@
         xmlhttp.send();
 	}
 
-
-
-
-
-
-  </script>
+ </script>
 </head>
 
 <body>
@@ -75,13 +52,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" id="modal-title">
+          <h4 class="modal-title">
 		<span id="modal-title"></span>
 	  </h4>
-        </div>
-        <div class="modal-body">
-          <p>Model Body</p>
-        </div>
+	  </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
