@@ -15,17 +15,33 @@
                 document.getElementById("modal-title").innerHTML = xmlhttp.responseText;
             }
         }
-        xmlhttp.open("GET", "index.php?q=" + document.getElementById("optionA").value, true);
+        xmlhttp.open("GET", "action.php?q=" + document.getElementById("optionA").value, true);
         xmlhttp.send();
 	}
 
-function create() {
-
-
+function read() {
+	window.location.href = "./src/read.php";
 }
+function deletes() {
+	var roll = document.getElementById('roll-del').value;
+	window.location.href = "./src/delete.php?q="+roll;
+}
+function create() {
+	var name = document.getElementById('form-name').value;
+	var dob = document.getElementById('form-dob').value;
+	var roll = document.getElementById('form-roll').value;
+	var reg = document.getElementById('form-reg').value;
+	var cpi = document.getElementById('form-cpi').value;
 
+	var getreq = "name=" + name + "&dob=" + dob + "&roll=" + roll + "&reg=" + reg + "&cpi=" + cpi;
 
-
+	window.location.href = "./src/create.php?"+getreq;
+	
+}
+function update() {
+	var roll = document.getElementById('roll-del').value;
+	window.location.href = "./src/update.php?q="+roll;
+}
  </script>
 </head>
 
